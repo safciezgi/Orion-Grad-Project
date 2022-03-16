@@ -3,7 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomePAgeComponent } from './components/welcome-page/welcome-page.component';
 
 const routes: Routes = [
-  {path:'welcomePage', component:WelcomePAgeComponent}
+  {path:'welcomePage', component:WelcomePAgeComponent},
+  {path:'', redirectTo:'welcomePage', pathMatch:'full'}
+
 ];
 
 @NgModule({
