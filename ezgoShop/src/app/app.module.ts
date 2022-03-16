@@ -7,6 +7,7 @@ import { WelcomePAgeComponent } from './components/welcome-page/welcome-page.com
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SideCartComponent } from './components/side-cart/side-cart.component';
+import { ProductsComponent } from './components/products/products.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { SideCartComponent } from './components/side-cart/side-cart.component';
     WelcomePAgeComponent,
     HeaderComponent,
     FooterComponent,
-    SideCartComponent
+    SideCartComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
