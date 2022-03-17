@@ -4,7 +4,7 @@
         <!-- Classy Menu -->
         <nav class="classy-navbar" id="essenceNav">
             <!-- Logo -->
-            <a class="nav-brand" href="#">
+            <a class="nav-brand" [routerLink]="'welcomePage'">
               <div class="header">
                 <img src="assets/img/logo.png">
               </div>
@@ -22,50 +22,15 @@
                 <!-- Nav Start -->
                 <div class="classynav">
                     <ul>
-                        <li><a href="#">Shop</a>
-                            <div class="megamenu">
-                                <ul class="single-mega cn-col-4">
-                                    <li class="title">Women's Collection</li>
-                                    <li><a href="#">Dresses</a></li>
-                                    <li><a href="#">Blouses &amp; Shirts</a></li>
-                                    <li><a href="#">T-shirts</a></li>
-                                    <li><a href="#">Rompers</a></li>
-                                    <li><a href="#">Bras &amp; Panties</a></li>
-                                </ul>
-                                <ul class="single-mega cn-col-4">
-                                    <li class="title">Men's Collection</li>
-                                    <li><a href="#">T-Shirts</a></li>
-                                    <li><a href="#">Polo</a></li>
-                                    <li><a href="#">Shirts</a></li>
-                                    <li><a href="#">Jackets</a></li>
-                                    <li><a href="#">Trench</a></li>
-                                </ul>
-                                <ul class="single-mega cn-col-4">
-                                    <li class="title">Kid's Collection</li>
-                                    <li><a href="#">Dresses</a></li>
-                                    <li><a href="#">Shirts</a></li>
-                                    <li><a href="#">T-shirts</a></li>
-                                    <li><a href="#">Jackets</a></li>
-                                    <li><a href="#">Trench</a></li>
-                                </ul>
-                                <div class="single-mega cn-col-4">
-                                    <img src="assets/img/bg-img/bg-6.jpg" alt="">
-                                </div>
-                            </div>
-                        </li>
                         <li><a href="#">Pages</a>
                             <ul class="dropdown">
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">Shop</a></li>
+                                <li><a [routerLink]="'/welcomePage'">Home</a></li>
+                                <li><a [routerLink]="'/products'">Shop</a></li>
                                 <li><a href="#">Product Details</a></li>
                                 <li><a href="#">Checkout</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Single Blog</a></li>
-                                <li><a href="#">Regular Page</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
@@ -88,7 +53,7 @@
             </div>
             <!-- User Login Info -->
             <div class="user-login-info">
-                <a href="#"><img src="assets/img/account.png" alt=""></a>
+                <a [routerLink]="'/login'"><img src="assets/img/account.png" alt=""></a>
             </div>
             <!-- Cart Area -->
             <div class="cart-area">
