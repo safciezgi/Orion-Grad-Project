@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AppServiceModule } from './app.service.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SignupComponent } from './components/signup/signup.component';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppServiceModule
   ],
   providers: [],
   bootstrap: [AppComponent]

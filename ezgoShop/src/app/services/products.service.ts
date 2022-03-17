@@ -1,17 +1,15 @@
 import { Injectable } from '@angular/core';
+import { IProductsService } from './Iproduct.service';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
-
-
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsService {
+export class ProductsService implements IProductsService {
 
-  constructor(private http:HttpClient) { }
+  constructor(protected http: HttpClient) { 
+  }
 
-  getProducts():Observable<any>
-  {
+  getProducts(){
     return this.http.get<any>("https://lego-api-project.herokuapp.com/products");
   }
 }
