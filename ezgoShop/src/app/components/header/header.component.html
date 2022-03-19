@@ -49,7 +49,7 @@
             </div>
             <!-- Favourite Area -->
             <div class="favourite-area">
-                <a href="#"><img src="assets/img/core-img/heart.svg" alt=""></a>
+                <a *ngIf="isLogin" (click)="logout()"><img src="assets/img/core-img/heart.svg" alt=""></a>
             </div>
             <!-- User Login Info -->
             <div class="user-login-info">

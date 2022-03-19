@@ -4,14 +4,15 @@ import { WelcomePAgeComponent } from './components/welcome-page/welcome-page.com
 import { ProductsComponent } from './components/products/products.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
-  {path:'welcomePage', component:WelcomePAgeComponent},
-  {path:'', redirectTo:'welcomePage', pathMatch:'full'},
-  {path:'products', component:ProductsComponent},
+  {path:'welcomePage', component:WelcomePAgeComponent, canActivate:[AuthGuard]},
+  {path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'products', component:ProductsComponent, canActivate:[AuthGuard]},
   {path:'login', component:LoginComponent},
   {path:'signup', component:SignupComponent},
-  {path:'products/:productPrice', component:ProductsComponent}
+  {path:'products/:productPrice', component:ProductsComponent, canActivate:[AuthGuard]}
 ];
 
 @NgModule({
