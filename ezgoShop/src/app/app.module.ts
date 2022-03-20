@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { AppServiceModule } from './app.service.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AppServiceModule } from './app.service.component';
     SideCartComponent,
     ProductsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    NotFoundComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -42,14 +42,14 @@
         <div class="header-meta d-flex clearfix justify-content-end">
             <!-- Search Area -->
             <div class="search-area">
-                <form action="#" method="post">
-                    <input type="search" name="search" id="headerSearch" placeholder="Type for search">
+                <form (submit)="search()">
+                    <input type="search" name="search" [(ngModel)]="searchTerm" id="headerSearch" placeholder="Type for search">
                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
                 </form>
             </div>
             <!-- Favourite Area -->
             <div class="favourite-area">
-                <a *ngIf="isLogin" (click)="logout()"><img src="assets/img/core-img/heart.svg" alt=""></a>
+                <a *ngIf="isLogin" (click)="logout()"><img src="https://cdn.discordapp.com/attachments/946460616527347753/955190173933633617/icons8-off-256.png" alt=""></a>
             </div>
             <!-- User Login Info -->
             <div class="user-login-info">

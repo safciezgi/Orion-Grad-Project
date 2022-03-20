@@ -1,0 +1,32 @@
+.detail-container{
+    margin-top: 150px;
+    margin-bottom: 300px;
+}
+
+h2{
+    margin-top: 20px;
+
+}
+h5{
+    margin-top: 80px;
+    opacity: 0.7;
+    font-size:medium;
+}
+h3{
+    margin-top: 20px;
+}
+
+button{
+    margin-top: 20px;
+    color: black;
+    margin-bottom: 30px;
+}
+.inner{
+    overflow: hidden;
+  }
+  .inner img {
+    transition: all 1.5s ease;
+  }
+  .inner:hover img{
+    transform: scale(1.2);
+  }
