@@ -15,6 +15,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AppServiceModule } from './app.service.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
+
 
 
 @NgModule({
@@ -28,7 +30,8 @@ import { ProductDetailComponent } from './components/product-detail/product-deta
     LoginComponent,
     SignupComponent,
     NotFoundComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,

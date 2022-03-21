@@ -8,6 +8,8 @@ import { AuthGuard } from './auth/auth.guard';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
+import { SideCartComponent } from './components/side-cart/side-cart.component';
 
 const routes: Routes = [
   {path:'welcomePage', component:WelcomePAgeComponent, canActivate:[AuthGuard]},
@@ -18,6 +20,8 @@ const routes: Routes = [
   // {path:'products/:productPrice', component:ProductsComponent, canActivate:[AuthGuard]},
   {path:'search/:searchTerm', component:ProductsComponent, canActivate:[AuthGuard]},
   {path:'productDetail/:id', component:ProductDetailComponent, canActivate:[AuthGuard]},
+  {path:'cartPage', component:CartPageComponent, canActivate:[AuthGuard]},
+  {path:'sideCart', component:SideCartComponent, canActivate:[AuthGuard]},
   {path:'**', component:NotFoundComponent}
 
 ];

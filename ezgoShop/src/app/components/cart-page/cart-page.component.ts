@@ -5,12 +5,12 @@ import { CartItem } from 'src/app/models/cartItem.model';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
-  selector: 'app-side-cart',
-  templateUrl: './side-cart.component.html',
-  styleUrls: ['./side-cart.component.scss']
+  selector: 'app-cart-page',
+  templateUrl: './cart-page.component.html',
+  styleUrls: ['./cart-page.component.scss']
 })
-export class SideCartComponent implements OnInit {
-  cart!:Cart;
+export class CartPageComponent implements OnInit {
+cart!:Cart;
   constructor(private cartService :CartService, private router :Router) {
     this.setCart();
    }
@@ -29,6 +29,7 @@ export class SideCartComponent implements OnInit {
   setCart(){
     this.cart = this.cartService.getCart();
   }
+
   ngOnInit(): void {
   }
 
