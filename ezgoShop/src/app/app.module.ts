@@ -16,7 +16,9 @@ import { AppServiceModule } from './app.service.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
-
+import {DataViewModule} from 'primeng/dataview';
+import { GridProductComponent } from './components/grid-product/grid-product.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
     SignupComponent,
     NotFoundComponent,
     ProductDetailComponent,
-    CartPageComponent
+    CartPageComponent,
+    GridProductComponent,
+    ListProductComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +43,8 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AppServiceModule
+    AppServiceModule,
+    DataViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -10,6 +10,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductDetailComponent } from './components/product-detail/product-detail.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { SideCartComponent } from './components/side-cart/side-cart.component';
+import { GridProductComponent } from './components/grid-product/grid-product.component';
+import { ListProductComponent } from './components/list-product/list-product.component';
 
 const routes: Routes = [
   {path:'welcomePage', component:WelcomePAgeComponent, canActivate:[AuthGuard]},
@@ -22,7 +24,9 @@ const routes: Routes = [
   {path:'productDetail/:id', component:ProductDetailComponent, canActivate:[AuthGuard]},
   {path:'cartPage', component:CartPageComponent, canActivate:[AuthGuard]},
   {path:'sideCart', component:SideCartComponent, canActivate:[AuthGuard]},
-  {path:'**', component:NotFoundComponent}
+  {path:'**', component:NotFoundComponent},
+  {path:'grid-view', component:GridProductComponent},
+  {path:'list-view', component:ListProductComponent}
 
 ];
 

@@ -1,16 +1,17 @@
+
 <div class="container detail-container " >
       <div class="card d-flex shadow">
         <div class="row">
             <div class="col-sm-6  d-flex align-self-stretch inner">
-                
+
                 <img class="img-fluid"src="{{selectedProduct[0].image}}" >
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6" style="margin-top: 50px;">
                 <h2 >{{selectedProduct[0].title}}</h2>
                 <h5 >{{selectedProduct[0].description}}</h5>
                 <h3 >
                     <span>Price: </span><span>${{selectedProduct[0].price}}</span>
-                </h3> 
+                </h3>
                 <button class="btn btn-outline-warning" (click)="addToCart()" >Add To Cart</button>
                 <button class="btn btn-outline-dark ms-2"[routerLink]="'/products'" >Shop ></button>
             </div>
@@ -37,7 +38,7 @@
                       </div>
                     </div>
                   </div>
-          
+
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-start">
@@ -71,7 +72,7 @@
                       </div>
                     </div>
                   </div>
-          
+
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-start">
@@ -104,7 +105,7 @@
                       </div>
                     </div>
                   </div>
-          
+
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-start">
@@ -141,7 +142,7 @@
                       </div>
                     </div>
                   </div>
-          
+
                   <div class="card mb-3">
                     <div class="card-body">
                       <div class="d-flex flex-start">
@@ -180,8 +181,9 @@
                 </div>
               </div>
             </div>
-          </section> 
-          
-    </div>  
-      
+          </section>
+
+    </div>
+
 </div>
+

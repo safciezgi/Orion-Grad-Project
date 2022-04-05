@@ -1,4 +1,4 @@
-<!--
+
 <div className="home">
 
   <section class="py-5">
@@ -19,12 +19,13 @@
                       <div class="card-body p-4" >
                           <div class="text-center">
                           <h5 class="fw-bolder" [routerLink]="['/productDetail', product.id]">{{product.title}}</h5>
-                            <strong><small style="opacity: 0.7;">{{product.description}}</small></strong>
 
+                            <strong><small style="opacity: 0.7;">{{product.description}}</small></strong>
                           </div>
                       </div>
 
                       <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+
                           <div class="text-center"><a class="btn btn-outline-dark mt-auto" [routerLink]="['/productDetail', product.id]">View Details</a></div>
                       </div>
                   </div>
@@ -32,40 +33,4 @@
           </div>
       </div>
   </section>
-</div> -->
-
-
-<div className="home" >
-  <div class="container px-4 px-lg-5 mt-5" >
-    <section class="py-5" >
-      <div class="mb-4 " >
-        <!-- buttons to switch view -->
-        <div class="btn-group pull-right">
-          <!-- Grid Button -->
-          <button class="btn btn-outline-dark" type="button"(click)="onDisplayModeChange(1)"
-                        [ngClass]="{'btn-primary active': displayMode === 1}" >
-                        <i class="fa fa-th"></i>
-          </button>
-          <!-- List Button -->
-          <button class="btn btn-outline-dark" type="button"  (click)="onDisplayModeChange(2)"
-                        [ngClass]="{'btn-primary active': displayMode === 2}" >
-                        <i class="fa fa-list"></i>
-          </button>
-         </div>
-        </div>
-      </section>
-    </div>
-  </div>
-                    <!-- grid -->
-
-                      <app-grid-product *ngIf="displayMode === 1" ></app-grid-product>
-
-                    <!-- List -->
-
-                      <app-list-product *ngIf="displayMode === 2"></app-list-product>
-
-
-
-
-
-
+</div>

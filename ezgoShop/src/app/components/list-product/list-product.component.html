@@ -1,0 +1,29 @@
+<div className="home">
+
+  <section class="py-5">
+      <div class="container px-4 px-lg-5 mt-5">
+        <div class="mb-4 mt-5">
+            <button *ngFor="let category of categories" class="me-2 btn btn-outline-dark " (click)="categoryChoose(category)">{{category}}</button>
+        </div>
+
+        <div class="card card-body mt-3 shadow justify-content-center d-flex" *ngFor="let product of filteredProducts">
+          <div class="media align-items-center align-items-lg-start text-center text-lg-left flex-column flex-lg-row">
+              <a class="nav-brand" [routerLink]="['/productDetail', product.id]">
+                <div class="inner"> <img class="card-img-top" src="{{product.image}}" > </div>
+              </a>
+              <div class="media-body">
+                <h5 class="fw-bolder mt-5" [routerLink]="['/productDetail', product.id]">{{product.title}}</h5>
+
+                  <p class="mb-3 mt-5">{{product.description}}</p>
+
+              </div>
+              <div class=" mt-lg-0 ml-lg-3 text-center">
+                  <div> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                  <div class="text-center "><a class="btn btn-outline-dark mt-auto" [routerLink]="['/productDetail', product.id]">View Details</a></div>
+              </div>
+          </div>
+      </div>
+
+      </div>
+  </section>
+</div>

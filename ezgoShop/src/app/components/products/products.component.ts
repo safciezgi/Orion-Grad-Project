@@ -13,13 +13,15 @@ export class ProductsComponent implements OnInit {
   categories: Array<string> = ['All Products','Batman','Harry Potter','Marvel','Super Mario','Star Wars',];
   products!: Product[];
   filteredProducts: any;
+  displayMode: number = 1;
   constructor(private productService: IProductsService, private route: ActivatedRoute) { }
-    
+
   ngOnInit(): any {
      this.productService.getProducts().subscribe(dataProduct =>{
         console.log(dataProduct);
         this.products = dataProduct;
         this.filteredProducts = this.products;
+
      });
      this.route.params.subscribe(params=> {
        if (params['searchTerm']) {
@@ -45,4 +47,8 @@ export class ProductsComponent implements OnInit {
       })
     }
   }
+  onDisplayModeChange(mode: number): void {
+    this.displayMode = mode;
+  }
+
 }
