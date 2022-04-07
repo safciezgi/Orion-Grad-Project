@@ -14,6 +14,8 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class ProductDetailComponent implements OnInit, DoCheck {
   user!: any ;
+  username!: any;
+  email!: any;
   productID!:number;
   products!: Product[];
   selectedProduct!: Product[];
@@ -25,42 +27,27 @@ export class ProductDetailComponent implements OnInit, DoCheck {
     this.user = localStorage.getItem('currentUser');
     console.log("this user" + this.user);
     if (typeof this.user === 'string') {
-      var parsed = JSON.parse(this.user); // ok
+      var parsed = JSON.parse(this.user);
+      console.log(parsed); // ok
   }
     console.log(typeof(parsed));
     for (const [key, value] of Object.entries(parsed)) {
-      if(key == 'username'){
-        var currentUser = value;
-        console.log(currentUser);
-      }
-    //   switch (key) {
-    //     case 0:
-    //         console.log("It is a Sunday.");
-    //         break;
-    //     case 1:
-    //         console.log("It is a Monday.");
-    //         break;
-    //     case 2:
-    //         console.log("It is a Tuesday.");
-    //         break;
-    //     case 3:
-    //         console.log("It is a Wednesday.");
-    //         break;
-    //     case 4:
-    //         console.log("It is a Thursday.");
-    //         break;
-    //     case 5:
-    //         console.log("It is a Friday.");
-    //         break;
-    //     case 6:
-    //         console.log("It is a Saturday.");
-    //         break;
-    //     default:
-    //         console.log("No such day exists!");
-    //         break;
-    // }
+      // if(key == 'username'){
+      //   var currentUser = value;
+      //   console.log(currentUser);
+      // }
+      switch (key) {
+        case 'username':
+            this.username = value;
+            break;
+        case 'email':
+          this.email = value;
+            break;
 
     }
+    }
+
+
     this.route.params.subscribe(params=>{
       this.productID = params['id']
     })
@@ -74,7 +61,6 @@ export class ProductDetailComponent implements OnInit, DoCheck {
   ngDoCheck(): void{
 
     this.selectedProduct = this.products.filter(product=> product.id == this.productID)
-    console.log(this.selectedProduct);
 
   }
 
