@@ -1,5 +1,5 @@
 <!-- <app-header *ngIf="isHidden == false"></app-header> -->
-<app-header></app-header>
+<app-header *ngIf="isHidden"></app-header>
 <app-side-cart></app-side-cart>
 <router-outlet> </router-outlet>
-<app-footer></app-footer>
+<app-footer *ngIf="isHidden"></app-footer>

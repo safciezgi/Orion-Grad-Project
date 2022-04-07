@@ -8,7 +8,7 @@ import { UserService } from './services/user.service';
 })
 export class AppComponent implements OnInit{
   title = 'ezgoShop';
-  // isHidden!: boolean;
+  isHidden!: boolean;
   constructor(private userService: UserService){
 
   }
@@ -16,9 +16,16 @@ export class AppComponent implements OnInit{
     this.checkUser();
     console.log(this.userService.isLogin);
 
+    this.userService.isLogin.subscribe(login => {
+      this.isHidden = login;
+    })
+
 
   }
     checkUser(){
+
+
+
     if (localStorage.length > 0) {
       this.userService.isLogin.next(true);
       // this.isHidden = false;

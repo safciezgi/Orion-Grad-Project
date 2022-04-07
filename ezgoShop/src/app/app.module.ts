@@ -19,6 +19,7 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
 import {DataViewModule} from 'primeng/dataview';
 import { GridProductComponent } from './components/grid-product/grid-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
+import { LoginUIComponent } from './components/login-ui/login-ui.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { ListProductComponent } from './components/list-product/list-product.com
     ProductDetailComponent,
     CartPageComponent,
     GridProductComponent,
-    ListProductComponent
+    ListProductComponent,
+    LoginUIComponent
   ],
   imports: [
     BrowserModule,

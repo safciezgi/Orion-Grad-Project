@@ -12,11 +12,13 @@ import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { SideCartComponent } from './components/side-cart/side-cart.component';
 import { GridProductComponent } from './components/grid-product/grid-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
+import { LoginUIComponent } from './components/login-ui/login-ui.component';
 
 const routes: Routes = [
   {path:'welcomePage', component:WelcomePAgeComponent, canActivate:[AuthGuard]},
-  {path:'', redirectTo:'login', pathMatch:'full'},
+  {path:'', redirectTo:'/loginUI', pathMatch:'full'},
   {path:'products', component:ProductsComponent, canActivate:[AuthGuard]},
+  {path:'loginUI', component:LoginUIComponent},
   {path:'login', component:LoginComponent},
   {path:'signup', component:SignupComponent},
   // {path:'products/:productPrice', component:ProductsComponent, canActivate:[AuthGuard]},
@@ -26,7 +28,7 @@ const routes: Routes = [
   {path:'sideCart', component:SideCartComponent, canActivate:[AuthGuard]},
   {path:'**', component:NotFoundComponent},
   {path:'grid-view', component:GridProductComponent},
-  {path:'list-view', component:ListProductComponent}
+  {path:'list-view', component:ListProductComponent},
 
 ];
 

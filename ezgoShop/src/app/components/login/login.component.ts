@@ -39,13 +39,14 @@ export class LoginComponent implements OnInit {
         this.loginForm.reset();
         localStorage.setItem("currentUser", JSON.stringify(currentUser));
         this.userService.isLogin.next(true);
+        this.userService.setToken('eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c')
         alert('Login Successful!');
         this.router.navigate(['welcomePage'])
       }else{
         alert('User not found!');
       }
     }
-  
+
 
   }
 }
