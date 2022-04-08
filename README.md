@@ -18,7 +18,8 @@
       - [Contact](#contact)
       
 ## Video
-![EzgoShop - Google Chrome 2022-03-21 15-53-48](https://user-images.githubusercontent.com/51738775/159273125-5f4a9614-0956-41a3-a1eb-09bf1e95d320.gif)
+
+[![Please click image to watch the video!](https://user-images.githubusercontent.com/51738775/162393476-f238f4ca-2fde-4d9b-b410-6fc351aeb9aa.png)](https://youtu.be/dgsmpDZmqM4)
 
 ## About Project
  This Project is Patika-Orion Innovation Turkey Angular Bootcamp assignment. I try to make clonish LEGO Web App, I deployed my own [lego-api](https://github.com/safciezgi/lego-api) with Heroku for the products.
